@@ -1,0 +1,56 @@
+<div ng-cloak>
+    <div class="row">
+
+        <div ng-include="'charts/linksInclude.html'"></div>
+        <div class="col-md-8">
+          <p>
+
+            <p class="input-group">
+
+              <span class="input-group-addon prefix">From</span>
+              <input type="date" class="input-sm form-control" name="startDate"
+               ng-model="startDate"/>
+              <span class="input-group-addon prefix">To</span>
+              <input type="date" class="input-sm form-control" name="endDate"
+              ng-model="endDate" />
+
+            </p>
+          </p>
+          <h4><span class="prefix">Year </span></h4>
+          <p class="input-group">
+								  <select class="form-control" style='width:210px'
+                    name="years" id="years" ng-model="years"
+                    ng-options="option.name for option in stockYears.availableOptions track by option.id">
+
+                 <!--   <option ng-repeat="option in dbType.availableOptions track by option" value="{{option.id}}">{{option.name}}</option> -->
+               </select>
+					</p>
+          <p class="input-group">
+            <button class="btn btn-primary" ng-click="search()" ><span class="glyphicon glyphicon-search"></span> <span class="buttonfonts">Search</span>
+                </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button class="btn btn-primary" ng-click="clear()"><span class="glyphicon glyphicon-clear"></span> <span class="buttonfonts">Clear</span>
+            </button>
+
+          </p>
+
+          </div>
+        <div id="areachart" class="col-md-10">
+        <h3>Area Chart</h3>
+
+        <style> /* set the CSS */
+
+
+          .axis path,
+          .axis line {
+            fill: none;
+            stroke: #000;
+            shape-rendering: crispEdges;
+          }
+
+          .area {
+            fill: steelblue;
+          }
+        </style>
+       </div>
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<div ng-cloak>
+    <div class="row">
+
+        <div ng-include="'charts/linksInclude.html'"></div>
+        <div class="col-md-5">
+          <h3> Number of colleges from 1 to 1200</h3>
+          <input type="range" ng-model="progress" min="1"  max="1000"></input>
+        </div>
+        <div id="columnchart" class="col-md-10">
+        <h3>Column Chart </h3>
+      <style>
+        .axis text{
+          font-family: Helvetica, Arial, sans-serif;
+          font-size: 9px;
+          text-anchor: end;
+        }
+        .axis path{
+          fill:none;
+          stroke:black;
+          stroke-width: 1.5px;
+        }
+        .bar{
+            stroke: none;
+            fill: steelblue;
+        }
+    </style>
+       </div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Node/Angular Employee App</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+    /* Remove the navbar's default margin-bottom and rounded borders */
+    .navbar {
+      margin-bottom: 0;
+      border-radius: 0;
+    }
+
+    /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+    .row.content {height: 450px}
+
+    /* Set gray background color and 100% height */
+    .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+
+    /* Set black background color, white text and some padding */
+    footer {
+      background-color: #555;
+      color: white;
+      padding: 15px;
+    }
+
+    /* On small screens, set height to 'auto' for sidenav and grid */
+    @media screen and (max-width: 767px) {
+      .sidenav {
+        height: auto;
+        padding: 15px;
+      }
+      .row.content {height:auto;}
+    }
+  </style>
+</head>
+ <body ng-app="charts">
+
+    <div ui-view="navbar" ng-cloak=""></div>
+      <div class="container-fluid">
+        <jh-alert-toast></jh-alert-toast>
+        <div class="well" ui-view="content"></div>
+
+      </div>
+
+  <!-- <script type="text/javascript" src="https://www.google.com/jsapi"></script> -->
+  <!-- <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script> -->
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+   <script type="text/javascript" src="http://code.highcharts.com/modules/data.js"></script>
+  <script src="libs/d3/d3.min.js"></script>
+
+
+  <script src="libs/jquery/dist/jquery.js"></script>
+ <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="libs/json3/lib/json3.js"></script>
+  <script src="libs/angular/angular.js"></script>
+  <script src="libs/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <script src="libs/angular-ui-router/release/angular-ui-router.js"></script>
+  <script src="libs/angular-resource/angular-resource.js"></script>
+  <script src="libs/angular-cookies/angular-cookies.js"></script>
+  <script src="libs/angular-sanitize/angular-sanitize.js"></script>
+  <script src="libs/angular-local-storage/dist/angular-local-storage.js"></script>
+  <script src="libs/angular-cache-buster/angular-cache-buster.js"></script>
+
+  <script src="app.js"></script>
+
+
+  <script src="components/navbar/navbar.directive.js"></script>
+  <script src="components/navbar/navbar.controller.js"></script>
+  <script src="charts/main.js"></script>
+  <script src="charts/main.controller.js"></script>
+
+  <script src="components/util/dateutil.service.js"></script>
+  <script src="components/util/stringutil.service.js"></script>
+
+  <script src="charts/chartsRoute.js"></script>
+
+  <script src="charts/columnchart.controller.js"></script>
+  <script src="charts/scatterplot.controller.js"></script>
+  <script src="charts/linechart.controller.js"></script>
+  <script src="charts/areachart.controller.js"></script>
+  <script src="charts/bubblechart.controller.js"></script>
+
+  <script src="charts/highcharts/highChartColumn.js"></script>
+  <script src="charts/highcharts/highChartline.js"></script>
+  <script src="charts/highcharts/highChartArea.js"></script>
+
+
+  <script src="components/directives/charts/piecharts.js"></script>
+  <script src="components/directives/charts/progressbar.js"></script>
+</body>
+</html>
